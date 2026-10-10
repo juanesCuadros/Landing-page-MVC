@@ -1,0 +1,292 @@
+---
+const services = [
+  {
+    id: "01",
+    title: "Desarrollo de Software Web a la Medida",
+    desc: "Construcción de aplicaciones corporativas robustas con Java Spring Boot en el backend y React en el frontend, garantizando velocidad y escalabilidad.",
+    tag: "SPRING BOOT + REACT"
+  },
+  {
+    id: "02",
+    title: "Arquitectura de APIs y Microservicios",
+    desc: "Diseño de APIs REST y arquitecturas hexagonales preparadas para alto volumen de transacciones, con total desacoplamiento y seguridad.",
+    tag: "MICROSERVICES & REST"
+  },
+  {
+    id: "03",
+    title: "Automatización de Procesos con n8n",
+    desc: "Orquestación de flujos de trabajo inteligentes que conectan tus herramientas actuales, eliminando tareas manuales repetitivas y errores operativos.",
+    tag: "N8N WORKFLOWS"
+  },
+  {
+    id: "04",
+    title: "Business Intelligence & Data Engineering",
+    desc: "Canalizaciones ETL, estructuración de Data Warehouses y tableros interactivos para convertir datos dispersos en decisiones de negocio certeras.",
+    tag: "DATA WAREHOUSE & BI"
+  },
+  {
+    id: "05",
+    title: "Integraciones con CRMs y ERPs",
+    desc: "Conexión transparente de plataformas comerciales (Kommo, Salesforce, HubSpot) con tus bases de datos internas y pasarelas de pago.",
+    tag: "CRM & API INTEGRATION"
+  },
+  {
+    id: "06",
+    title: "Modernización de Sistemas Legacy",
+    desc: "Migración gradual y refactorización de software obsoleto a infraestructuras en la nube modernas, sin interrumpir la operación de tus clientes.",
+    tag: "CLOUD & REFACTOR"
+  }
+];
+---
+
+<section class="services-section section-padding" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <span class="mono-eyebrow">CAPACIDADES TÉCNICAS</span>
+      <h2 class="section-title">Nuestros Servicios de Desarrollo Incluyen:</h2>
+      <p class="section-subtitle">
+        Soluciones de ingeniería diseñadas a la medida exacta de tus procesos operativos y metas comerciales.
+      </p>
+    </div>
+
+    <div class="services-layout">
+      <!-- 2/3 Grid con tarjetas blancas -->
+      <div class="services-cards-grid">
+        {services.map((item) => (
+          <article class="service-card">
+            <div class="card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg>
+              </div>
+              <span class="service-tag">{item.tag}</span>
+            </div>
+            <h3 class="service-title">{item.title}</h3>
+            <p class="service-desc">{item.desc}</p>
+          </article>
+        ))}
+      </div>
+
+      <!-- 1/3 Card Lateral con métricas y valor de ingeniería -->
+      <aside class="services-sidebar-card">
+        <div class="sidebar-visual">
+          <div class="sidebar-badge">EQUIPO SENIOR DEDICADO</div>
+          <h3 class="sidebar-title">Ingeniería Enfocada en Retorno de Inversión (ROI)</h3>
+          <p class="sidebar-text">
+            No somos una fábrica de código masivo. Somos un estudio técnico que se sienta contigo a entender la arquitectura de tu negocio antes de escribir la primera línea.
+          </p>
+          <div class="sidebar-stats">
+            <div class="stat-row">
+              <span class="stat-number">+70%</span>
+              <span class="stat-caption">Reducción de tiempos manuales mediante automatización</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-number">100%</span>
+              <span class="stat-caption">Código propio sin dependencias opacas</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-number">&lt; 24h</span>
+              <span class="stat-caption">Respuesta técnica y soporte proactivo</span>
+            </div>
+          </div>
+          <a href="#contacto" class="btn-primary sidebar-btn">
+            <span>CONSULTAR PROYECTO</span>
+            <span>→</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    background-color: var(--bg);
+  }
+
+  .section-header {
+    margin-bottom: 50px;
+    max-width: 780px;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.2vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .services-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+  }
+
+  .services-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .service-card {
+    background-color: var(--surface);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+  }
+
+  .service-card:hover {
+    border-color: var(--border-light);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .service-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-icon-box svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--primary);
+    background-color: #F0F4FA;
+    padding: 4px 10px;
+    border-radius: 9999px;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Sidebar Card */
+  .services-sidebar-card {
+    display: flex;
+  }
+
+  .sidebar-visual {
+    background: linear-gradient(135deg, #182234 0%, #0F172A 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sidebar-badge {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: rgba(0, 112, 245, 0.25);
+    color: #60A5FA;
+    border: 1px solid rgba(0, 112, 245, 0.4);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-title {
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .sidebar-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #CBD5E1;
+    margin-bottom: 30px;
+  }
+
+  .sidebar-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+    padding-block: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .stat-number {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #60A5FA;
+  }
+
+  .stat-caption {
+    font-size: 0.8rem;
+    color: #94A3B8;
+  }
+
+  .sidebar-btn {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  @media (max-width: 1080px) {
+    .services-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .services-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

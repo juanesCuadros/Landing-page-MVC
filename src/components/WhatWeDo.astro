@@ -1,0 +1,83 @@
+---
+---
+
+<section class="what-we-do-section" id="que-hacemos">
+  <div class="container">
+    <div class="what-we-do-grid">
+      <div class="col-title">
+        <span class="mono-eyebrow">PROPUESTA DE VALOR</span>
+        <h2 class="section-title">¿Qué Hacemos en MVC Software Studio?</h2>
+      </div>
+      <div class="col-desc">
+        <p class="lead-text">
+          Diseñamos, construimos y modernizamos <strong>soluciones de software a la medida</strong> para empresas que no pueden permitirse fallas operativas ni cuellos de botella tecnológicos.
+        </p>
+        <p class="body-text">
+          Combinamos la solidez de arquitecturas empresariales en <strong>Java Spring Boot</strong> con interfaces interactivas de alta velocidad en <strong>React</strong>, integrando automatizaciones con <strong>n8n</strong> y plataformas de <strong>Business Intelligence</strong>. Convertimos requerimientos de negocio complejos en software escalable, seguro y fácil de operar, sin interrumpir tu operación diaria.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .what-we-do-section {
+    background-color: var(--surface-alt);
+    padding-block: 70px;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .what-we-do-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .col-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  .col-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lead-text {
+    font-size: 1.18rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  .lead-text strong {
+    color: var(--primary);
+  }
+
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+
+  .body-text strong {
+    color: var(--text);
+  }
+
+  @media (max-width: 900px) {
+    .what-we-do-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+</style>

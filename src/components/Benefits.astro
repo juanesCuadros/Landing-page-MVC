@@ -1,0 +1,153 @@
+---
+const benefits = [
+  {
+    title: "Entregas Rápidas e Incrementales",
+    desc: "Metodología ágil con software funcional entregado cada 2 semanas. Validación continua sin esperar meses para ver resultados.",
+    icon: `<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />`
+  },
+  {
+    title: "Código Limpio sin Deuda Técnica",
+    desc: "Arquitectura hexagonal desacoplada y documentada. El código fuente es 100% de tu propiedad, sin ataduras a proveedores.",
+    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />`
+  },
+  {
+    title: "Ahorro Real de Horas Operativas",
+    desc: "Procesos manuales reemplazados por flujos automatizados con n8n y microservicios que reducen el error humano a cero.",
+    icon: `<circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />`
+  },
+  {
+    title: "Datos Accionables en Tiempo Real",
+    desc: "Tableros de Business Intelligence integrados a tu software para visualizar KPIs críticos y tomar decisiones con certeza.",
+    icon: `<line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />`
+  }
+];
+---
+
+<section class="benefits-section section-padding" id="beneficios">
+  <div class="container">
+    <div class="benefits-header">
+      <span class="mono-eyebrow">VALOR DE NEGOCIO</span>
+      <h2 class="benefits-title">¿Qué Gana tu Empresa con Nuestra Ingeniería?</h2>
+      <p class="benefits-subtitle">
+        Desarrollamos soluciones pensadas no solo para funcionar, sino para impulsar la rentabilidad y la competitividad de tu empresa.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      {benefits.map((item) => (
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={item.icon} />
+          </div>
+          <h3 class="benefit-title">{item.title}</h3>
+          <p class="benefit-desc">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="benefits-cta-wrap">
+      <a href="#metodologia" class="btn-primary">
+        <span>DESCUBRE NUESTRA METODOLOGÍA</span>
+        <span>↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits-section {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .benefits-header {
+    text-align: center;
+    max-width: 760px;
+    margin-inline: auto;
+    margin-bottom: 60px;
+  }
+
+  .benefits-title {
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .benefits-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 50px;
+  }
+
+  .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 8px;
+  }
+
+  .benefit-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background-color: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  .benefit-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .benefit-title {
+    font-size: 1.3rem;
+    font-weight: 400; /* Ligero según design tokens del brief */
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 14px;
+    min-height: 54px;
+  }
+
+  .benefit-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .benefits-cta-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    .benefit-title {
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+</style>

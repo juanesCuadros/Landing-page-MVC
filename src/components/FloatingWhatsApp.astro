@@ -1,0 +1,129 @@
+---
+---
+
+<div class="whatsapp-widget" id="whatsapp-widget">
+  <div class="whatsapp-tooltip" id="whatsapp-tooltip">
+    <div class="tooltip-header">
+      <span class="online-indicator"></span>
+      <span class="tooltip-agent">Equipo Técnico MVC</span>
+    </div>
+    <p class="tooltip-message">¿Tienes dudas sobre tu proyecto? Hablemos por WhatsApp en vivo.</p>
+  </div>
+
+  <a
+    href="https://wa.me/573000000000?text=Hola%20equipo%20de%20MVC,%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20desarrollo%20de%20software%20a%20la%20medida%20para%20mi%20empresa."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-btn"
+    aria-label="Contactar a MVC Software Studio por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A14 14 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.3 1.1 1.2-4.2-.3-.5A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1.1s-.6-.2-.8.2-1 1.1-1.2 1.3-.4.2-.7 0a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.1-.7s.3-.4.5-.6.2-.3.3-.5a.6.6 0 0 0 0-.6c-.1-.2-.8-2-1.1-2.7s-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2 7.5 7.5 0 0 0 1.6 4 17.3 17.3 0 0 0 6.6 5.8c.8.3 1.4.5 1.9.7a4.6 4.6 0 0 0 2.1.1 3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.3-.4-.4-.7-.6z"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+  .whatsapp-widget {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .whatsapp-tooltip {
+    background-color: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 240px;
+    font-size: 0.82rem;
+    animation: bounceIn 0.5s ease-out;
+  }
+
+  .tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .online-indicator {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--whatsapp);
+    box-shadow: 0 0 6px var(--whatsapp);
+  }
+
+  .tooltip-agent {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .tooltip-message {
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .whatsapp-btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: var(--whatsapp);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(45, 183, 66, 0.4);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .whatsapp-btn:hover {
+    background-color: var(--whatsapp-hover);
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 12px 28px rgba(45, 183, 66, 0.5);
+  }
+
+  .whatsapp-btn svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .whatsapp-widget {
+      bottom: 20px;
+      right: 20px;
+    }
+    .whatsapp-tooltip {
+      display: none; /* Simplificado en pantallas muy pequeñas */
+    }
+    .whatsapp-btn {
+      width: 52px;
+      height: 52px;
+    }
+    .whatsapp-btn svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+</style>

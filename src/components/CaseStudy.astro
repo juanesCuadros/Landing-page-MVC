@@ -1,0 +1,239 @@
+---
+---
+
+<section class="case-study-section section-padding" id="caso-estudio">
+  <div class="container">
+    <div class="case-study-card">
+      <div class="case-visual">
+        <div class="visual-inner">
+          <div class="case-top-bar">
+            <span class="case-pill">CASO DE ÉXITO EMPRESARIAL</span>
+            <span class="case-status">PRODUCCIÓN ACTIVA</span>
+          </div>
+          <div class="case-diagram">
+            <div class="diagram-step">
+              <span class="step-badge">ANTES</span>
+              <p>Hojas de cálculo dispersas, 12 horas semanales en digitación manual y errores recurrentes en pedidos.</p>
+            </div>
+            <div class="diagram-arrow">↓ Solución MVC: Java Spring Boot + n8n + React ↓</div>
+            <div class="diagram-step success">
+              <span class="step-badge success">HOY</span>
+              <p>Plataforma web unificada, sincronización automática vía API REST y dashboard gerencial en tiempo real.</p>
+            </div>
+          </div>
+          <div class="case-metrics">
+            <div class="c-metric">
+              <span class="c-val">-72%</span>
+              <span class="c-label">Tiempo Operativo Manual</span>
+            </div>
+            <div class="c-metric">
+              <span class="c-val">99.9%</span>
+              <span class="c-label">Precisión en Datos</span>
+            </div>
+            <div class="c-metric">
+              <span class="c-val">3x</span>
+              <span class="c-label">Velocidad de Procesamiento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <span class="mono-eyebrow">INGENIERÍA APLICADA A RESULTADOS</span>
+        <h3 class="case-heading">¿Tienes Sistemas Rígidos o Procesos Manuales que Frenan Tu Expansión?</h3>
+        <p class="case-paragraph">
+          Muchas empresas invierten miles de dólares en software genérico o licencias costosas que no se adaptan a su modelo de negocio real. El resultado: equipos frustrados haciendo parches manuales en Excel o bases de datos desincronizadas.
+        </p>
+        <p class="case-paragraph">
+          En MVC construimos una solución integral para uno de nuestros clientes B2B: un backend de alta concurrencia en <strong>Spring Boot</strong>, interfaz reactiva para sus clientes en <strong>React</strong> y un motor de flujos con <strong>n8n</strong> que sincronizó su CRM con facturación electrónica. Todo entregado en sprints quincenales sin frenar ni un solo día sus ventas.
+        </p>
+        <div class="case-cta-block">
+          <a href="#contacto" class="btn-primary">
+            <span>QUIERO UN DIAGNÓSTICO PARA MI EMPRESA</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-study-section {
+    background-color: var(--bg);
+  }
+
+  .case-study-card {
+    background-color: var(--surface);
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  }
+
+  .case-visual {
+    background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+    color: #FFFFFF;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .visual-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .case-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .case-pill {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.15);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    letter-spacing: 0.8px;
+  }
+
+  .case-status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .case-status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #10B981;
+    box-shadow: 0 0 8px #10B981;
+  }
+
+  .case-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .diagram-step {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .diagram-step.success {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+
+  .step-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #EF4444;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .step-badge.success {
+    color: #10B981;
+  }
+
+  .diagram-step p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #CBD5E1;
+  }
+
+  .diagram-arrow {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #38BDF8;
+    font-weight: 600;
+  }
+
+  .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .c-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .c-val {
+    font-family: var(--font-mono);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #38BDF8;
+  }
+
+  .c-label {
+    font-size: 0.72rem;
+    color: #94A3B8;
+  }
+
+  /* Content Column */
+  .case-content {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .case-heading {
+    font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .case-paragraph {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .case-paragraph strong {
+    color: var(--text);
+  }
+
+  .case-cta-block {
+    margin-top: 14px;
+  }
+
+  @media (max-width: 960px) {
+    .case-study-card {
+      grid-template-columns: 1fr;
+    }
+    .case-visual {
+      padding: 36px 24px;
+    }
+    .case-content {
+      padding: 36px 24px;
+    }
+  }
+</style>

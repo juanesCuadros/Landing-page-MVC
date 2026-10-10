@@ -1,0 +1,349 @@
+---
+---
+
+<header id="site-header" class="site-header">
+  <div class="container header-container">
+    <a href="#" class="brand-logo" aria-label="MVC.Tech - Inicio">
+      <span class="brand-wordmark">
+        <span class="mvc-bold">MVC</span><span class="dot-accent">.</span><span class="tech-light">Tech</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+        <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+        <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
+        <li><a href="#faq" class="nav-link">Preguntas</a></li>
+      </ul>
+      <a href="#contacto" class="btn-primary header-cta">
+        <span>SOLICITA ASESORÍA</span>
+        <span class="cta-arrow">→</span>
+      </a>
+      <button id="menu-toggle-btn" class="menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <span class="menu-label">MENÚ</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" class="menu-icon-svg" width="18" height="18" aria-hidden="true">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile / Overlay Navigation -->
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true">
+    <div class="overlay-backdrop" id="overlay-backdrop"></div>
+    <div class="overlay-panel">
+      <div class="overlay-header">
+        <span class="mono-eyebrow">NAVEGACIÓN</span>
+        <button id="close-overlay-btn" class="close-btn" aria-label="Cerrar menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="overlay-links">
+        <li><a href="#servicios" class="overlay-link">01. SERVICIOS ESPECIALIZADOS</a></li>
+        <li><a href="#beneficios" class="overlay-link">02. BENEFICIOS EMPRESARIALES</a></li>
+        <li><a href="#caso-estudio" class="overlay-link">03. CASO DE ÉXITO</a></li>
+        <li><a href="#metodologia" class="overlay-link">04. CÓMO TRABAJAMOS</a></li>
+        <li><a href="#tecnologias" class="overlay-link">05. STACK TECNOLÓGICO</a></li>
+        <li><a href="#sectores" class="overlay-link">06. SECTORES</a></li>
+        <li><a href="#faq" class="overlay-link">07. PREGUNTAS FRECUENTES</a></li>
+        <li><a href="#contacto" class="overlay-link">08. CONTACTO / ASESORÍA</a></li>
+      </ul>
+      <div class="overlay-footer">
+        <p class="overlay-note">Desarrollo de software a la medida en Colombia</p>
+        <a href="#contacto" class="btn-primary overlay-cta">SOLICITA TU ASESORÍA →</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    background-color: rgba(247, 247, 247, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid #ECECEC;
+  }
+
+  .header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .brand-logo:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  .brand-wordmark {
+    font-family: var(--font-main);
+    font-size: 1.85rem;
+    line-height: 1;
+    letter-spacing: -0.6px;
+    display: inline-flex;
+    align-items: baseline;
+    user-select: none;
+  }
+
+  .mvc-bold {
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .dot-accent {
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 0;
+    margin-inline: 1px;
+  }
+
+  .tech-light {
+    font-weight: 300;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.2s ease;
+    padding: 6px 0;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  .header-cta {
+    padding: 10px 22px;
+    font-size: 0.82rem;
+  }
+
+  .cta-arrow {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .menu-btn {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+
+  .menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .menu-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  /* Overlay Navigation */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-overlay.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .overlay-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .overlay-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    background-color: var(--surface);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-overlay.open .overlay-panel {
+    transform: translateX(0);
+  }
+
+  .overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+
+  .close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .overlay-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: auto;
+  }
+
+  .overlay-link {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: all 0.2s ease;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0F0F0;
+  }
+
+  .overlay-link:hover {
+    color: var(--primary);
+    transform: translateX(6px);
+  }
+
+  .overlay-footer {
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .overlay-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .overlay-cta {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .nav-links, .header-cta {
+      display: none;
+    }
+    .menu-btn {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  // Sticky header class toggle
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Menu toggle
+  const menuBtn = document.getElementById('menu-toggle-btn');
+  const closeBtn = document.getElementById('close-overlay-btn');
+  const overlay = document.getElementById('nav-overlay');
+  const backdrop = document.getElementById('overlay-backdrop');
+  const overlayLinks = document.querySelectorAll('.overlay-link');
+
+  function toggleMenu(open) {
+    if (open) {
+      overlay?.classList.add('open');
+      overlay?.setAttribute('aria-hidden', 'false');
+      menuBtn?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    } else {
+      overlay?.classList.remove('open');
+      overlay?.setAttribute('aria-hidden', 'true');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  }
+
+  menuBtn?.addEventListener('click', () => toggleMenu(true));
+  closeBtn?.addEventListener('click', () => toggleMenu(false));
+  backdrop?.addEventListener('click', () => toggleMenu(false));
+
+  overlayLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+</script>

@@ -1,0 +1,232 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo" aria-label="MVC.Tech - Inicio">
+          <span class="brand-wordmark">
+            <span class="mvc-bold">MVC</span><span class="dot-accent">.</span><span class="tech-light">Tech</span>
+          </span>
+        </a>
+        <p class="brand-claim">
+          Desarrollo de software a la medida, arquitecturas escalables y automatización de procesos empresariales desde Popayán para toda Colombia y LATAM.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4 tarjetas con borde gris suave según brief -->
+    <div class="footer-cards-grid">
+      <div class="footer-card">
+        <h3 class="card-title">UBICACIÓN</h3>
+        <p class="card-text">
+          Popayán (Cauca), Bogotá & Medellín, Colombia.<br />
+          Atención remota a nivel nacional y para proyectos en América Latina.
+        </p>
+        <span class="card-sub">Horario: Lun - Vie 8:00 a 18:00 (COT)</span>
+      </div>
+
+      <div class="footer-card">
+        <h3 class="card-title">CONTACTO DIRECTO</h3>
+        <p class="card-text">
+          <strong>Correo:</strong> contacto@mvcsoftware.com.co<br />
+          <strong>WhatsApp:</strong> +57 300 000 0000<br />
+          <strong>Soporte SLA:</strong> 24/7 para clientes activos
+        </p>
+      </div>
+
+      <div class="footer-card">
+        <h3 class="card-title">CANALES & REDES</h3>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Corporation ↗</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Open Source ↗</a></li>
+          <li><a href="#contacto">Agenda en Google Meet ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-card">
+        <h3 class="card-title">LEGAL Y NAVEGACIÓN</h3>
+        <ul class="footer-links">
+          <li><a href="#servicios">Servicios de Desarrollo</a></li>
+          <li><a href="#metodologia">Metodología Ágil</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#" class="legal-link">Tratamiento de Datos (Ley 1581)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        © {new Date().getFullYear()} MVC Software Studio. Todos los derechos reservados. Hecho con Astro para máximo rendimiento y SEO.
+      </p>
+      <div class="footer-bottom-links">
+        <span>NIT: 900.000.000-1</span>
+        <span>Colombia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border-light);
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .brand-logo:hover {
+    opacity: 0.88;
+  }
+
+  .brand-wordmark {
+    font-family: var(--font-main);
+    font-size: 1.85rem;
+    line-height: 1;
+    letter-spacing: -0.6px;
+    display: inline-flex;
+    align-items: baseline;
+    user-select: none;
+  }
+
+  .mvc-bold {
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .dot-accent {
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 0;
+    margin-inline: 1px;
+  }
+
+  .tech-light {
+    font-weight: 300;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  .brand-claim {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 460px;
+    line-height: 1.5;
+  }
+
+  /* 4 tarjetas con borde gris suave */
+  .footer-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .footer-card {
+    background-color: var(--bg);
+    border: 1px solid #E8EAEF;
+    border-radius: 12px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-title {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--primary);
+  }
+
+  .card-text {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .card-text strong {
+    color: var(--text-muted);
+  }
+
+  .card-sub {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: auto;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    font-size: 0.88rem;
+    color: var(--text);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--primary);
+  }
+
+  .legal-link {
+    color: var(--text-muted) !important;
+    font-size: 0.82rem !important;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-light);
+    font-size: 0.82rem;
+    color: var(--text-light);
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 992px) {
+    .footer-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  }
+</style>

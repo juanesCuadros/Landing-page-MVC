@@ -1,0 +1,109 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Desarrollo de Software a la Medida en Colombia | MVC Software Studio",
+  description = "Empresa de desarrollo de software a la medida en Colombia. Especialistas en Java Spring Boot, React, automatización con n8n y Business Intelligence. Solicita tu asesoría.",
+  canonical = "https://mvcsoftware.com.co/",
+  ogImage = "https://mvcsoftware.com.co/og-image.jpg"
+} = Astro.props;
+
+// JSON-LD Schemas for Schema.org
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://mvcsoftware.com.co/#organization",
+  "name": "MVC.Tech",
+  "alternateName": "MVC Tecnología Innovación Soluciones Popayán",
+  "url": "https://mvcsoftware.com.co/",
+  "logo": "https://mvcsoftware.com.co/logo.png",
+  "image": "https://mvcsoftware.com.co/logo.png",
+  "description": "Estudio de ingeniería y desarrollo de software a la medida en Popayán, Colombia. Soluciones empresariales con Java Spring Boot, React, APIs y automatización n8n.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Popayán",
+    "addressRegion": "Cauca",
+    "addressCountry": "CO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 2.4419,
+    "longitude": -76.6063
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "LATAM"
+    }
+  ],
+  "priceRange": "$$$",
+  "knowsAbout": [
+    "Desarrollo de Software a la Medida",
+    "Java Spring Boot",
+    "React",
+    "Automatización de Procesos con n8n",
+    "Business Intelligence y Data Warehousing",
+    "Arquitectura Hexagonal y Microservicios",
+    "Integración de APIs y CRMs"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ]
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://mvcsoftware.com.co/#website",
+  "url": "https://mvcsoftware.com.co/",
+  "name": "MVC Software Studio - Desarrollo de Software",
+  "inLanguage": "es-CO"
+};
+---
+
+<!-- Essential SEO -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="keywords" content="desarrollo de software, desarrollo de software a la medida, empresa de desarrollo de software Colombia, desarrollo web Java Spring Boot React, automatizacion n8n, consultoria TI Bogota Medellin" />
+<meta name="author" content="MVC Software Studio" />
+
+<!-- Geo Local SEO Colombia -->
+<meta name="geo.region" content="CO" />
+<meta name="geo.placename" content="Bogotá, Colombia" />
+<meta name="geo.position" content="4.7110;-74.0721" />
+<meta name="ICBM" content="4.7110, -74.0721" />
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content="MVC Software Studio" />
+<meta property="og:locale" content="es_CO" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />

@@ -1,0 +1,337 @@
+---
+---
+
+<section class="hero-section" id="hero">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <span class="mono-eyebrow">ESTUDIO DE INGENIERÍA Y SOFTWARE B2B</span>
+      
+      <h1 class="hero-title">
+        Desarrollo de Software a la Medida para Empresas que Necesitan Escalar
+      </h1>
+
+      <p class="hero-subtitle">
+        ¿Tus sistemas actuales ya no responden al ritmo de tu negocio, tu equipo pierde horas en tareas manuales o estás atado a soluciones rígidas que no se adaptan a tu operación?
+      </p>
+
+      <div class="hero-bullets">
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <span class="bullet-text">Arquitecturas desacopladas y de alto rendimiento con <strong>Java Spring Boot</strong> y <strong>React</strong>.</span>
+        </div>
+        
+        <div class="bullet-separator"></div>
+
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <span class="bullet-text">Automatización integral de flujos con <strong>n8n</strong> y consolidación de datos para toma de decisiones.</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary hero-btn">
+          <span>SOLICITA ASESORÍA TÉCNICA</span>
+          <span class="hero-arrow">→</span>
+        </a>
+        <span class="hero-guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shield-icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Acuerdo de confidencialidad (NDA) garantizado
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hud-card main-terminal">
+        <div class="terminal-bar">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">mvc-architecture-core.ts</span>
+          <span class="terminal-badge">LIVE PRODUCTION</span>
+        </div>
+        <div class="code-preview">
+          <div class="code-line"><span class="c-keyword">import</span> &#123; <span class="c-entity">MicroserviceCluster</span> &#125; <span class="c-keyword">from</span> <span class="c-string">'@mvc/cloud'</span>;</div>
+          <div class="code-line"><span class="c-keyword">import</span> &#123; <span class="c-entity">WorkflowOrchestrator</span> &#125; <span class="c-keyword">from</span> <span class="c-string">'@mvc/n8n'</span>;</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line"><span class="c-comment">// Despliegue de alto rendimiento sin deuda técnica</span></div>
+          <div class="code-line"><span class="c-keyword">export const</span> <span class="c-func">deployEnterpriseSystem</span> = <span class="c-keyword">async</span> () =&gt; &#123;</div>
+          <div class="code-line indent"><span class="c-keyword">const</span> backend = <span class="c-keyword">await</span> SpringBoot.<span class="c-func">initCluster</span>(&#123;</div>
+          <div class="code-line indent-2">arch: <span class="c-string">'Hexagonal'</span>,</div>
+          <div class="code-line indent-2">latency: <span class="c-string">'&lt; 18ms'</span>,</div>
+          <div class="code-line indent-2">concurrency: <span class="c-number">100_000</span></div>
+          <div class="code-line indent">&#125;);</div>
+          <div class="code-line indent"><span class="c-keyword">return</span> backend.<span class="c-func">scale</span>();</div>
+          <div class="code-line">&#125;;</div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-pill">
+            <span class="metric-val">99.98%</span>
+            <span class="metric-label">Uptime Garantizado</span>
+          </div>
+          <div class="metric-pill">
+            <span class="metric-val">0 Deuda</span>
+            <span class="metric-label">Clean Code & QA</span>
+          </div>
+          <div class="metric-pill">
+            <span class="metric-val">100%</span>
+            <span class="metric-label">Propiedad de Código</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background: linear-gradient(180deg, #F7F7F7 0%, #FFFFFF 100%);
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 4.2vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 620px;
+  }
+
+  .hero-bullets {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 18px 22px;
+  }
+
+  .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .bullet-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .bullet-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .bullet-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .bullet-text strong {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .bullet-separator {
+    height: 1px;
+    background-color: #EFEFEF;
+    margin: 14px 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-btn {
+    align-self: flex-start;
+    padding: 16px 36px;
+    font-size: 0.95rem;
+  }
+
+  .hero-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .hero-btn:hover .hero-arrow {
+    transform: translateX(4px);
+  }
+
+  .hero-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-light);
+  }
+
+  .shield-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+  }
+
+  /* Visual HUD Terminal */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hud-card {
+    background-color: #121824;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+  }
+
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background-color: #0B0F17;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .window-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot.red { background-color: #EF4444; }
+  .dot.yellow { background-color: #F59E0B; }
+  .dot.green { background-color: #10B981; }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #94A3B8;
+  }
+
+  .terminal-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #10B981;
+    background: rgba(16, 185, 129, 0.15);
+    padding: 2px 8px;
+    border-radius: 9999px;
+  }
+
+  .code-preview {
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #E2E8F0;
+  }
+
+  .c-keyword { color: #38BDF8; font-weight: 600; }
+  .c-entity { color: #F472B6; }
+  .c-string { color: #A7F3D0; }
+  .c-func { color: #FCD34D; }
+  .c-number { color: #FBBF24; }
+  .c-comment { color: #64748B; font-style: italic; }
+
+  .indent { padding-left: 1.25rem; }
+  .indent-2 { padding-left: 2.5rem; }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .metric-pill {
+    background-color: #0F172A;
+    padding: 14px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .metric-val {
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #38BDF8;
+  }
+
+  .metric-label {
+    font-size: 0.68rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 992px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

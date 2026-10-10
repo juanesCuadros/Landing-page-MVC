@@ -1,0 +1,137 @@
+---
+const projects = [
+  { name: "SISTEMA TRANSACCIONAL FINTECH", tag: "Java + PostgreSQL", metric: "+150k Transacciones/día" },
+  { name: "PLATAFORMA B2B DISTRIBUCIÓN", tag: "React + Spring Boot", metric: "99.98% Disponibilidad" },
+  { name: "ORQUESTADOR N8N AUTOMATION", tag: "Workflows + APIs", metric: "-70% Tiempo Manual" },
+  { name: "DATA WAREHOUSE & DASHBOARDS", tag: "BI & Metabase", metric: "Decisiones en Tiempo Real" }
+];
+---
+
+<section class="clients-section section-padding" id="proyectos">
+  <div class="container">
+    <div class="clients-header">
+      <span class="mono-eyebrow">CONFIANZA Y TRAYECTORIA</span>
+      <h2 class="clients-title">Ingeniería de Software con Resultados Demostrables</h2>
+      <p class="clients-subtitle">
+        Diseñamos arquitecturas críticas para organizaciones que valoran la estabilidad y la entrega puntual.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map((proj) => (
+        <div class="project-box">
+          <div class="proj-badge">{proj.tag}</div>
+          <h3 class="proj-name">{proj.name}</h3>
+          <div class="proj-metric">
+            <span class="metric-dot"></span>
+            <span>{proj.metric}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .clients-section {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .clients-header {
+    text-align: center;
+    max-width: 760px;
+    margin-inline: auto;
+    margin-bottom: 48px;
+  }
+
+  .clients-title {
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .clients-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .project-box {
+    background-color: var(--bg);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 160px;
+    transition: all 0.25s ease;
+  }
+
+  .project-box:hover {
+    border-color: var(--primary);
+    background-color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 112, 245, 0.06);
+  }
+
+  .proj-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: var(--primary-soft);
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .proj-name {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-block: 10px;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+  }
+
+  .proj-metric {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #059669;
+    font-weight: 600;
+  }
+
+  .metric-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #059669;
+  }
+
+  @media (max-width: 992px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
