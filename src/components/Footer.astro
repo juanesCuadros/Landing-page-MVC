@@ -5,7 +5,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#" class="brand-logo" aria-label="MVC.Tech - Inicio">
+        <a href="#" class="brand-logo" aria-label="MVC Tech Popayán - Inicio">
           <span class="brand-wordmark">
             <span class="mvc-bold">MVC</span><span class="dot-accent">.</span><span class="tech-light">Tech</span>
           </span>
@@ -21,7 +21,7 @@
       <div class="footer-card">
         <h3 class="card-title">UBICACIÓN</h3>
         <p class="card-text">
-          Popayán (Cauca), Bogotá & Medellín, Colombia.<br />
+          Popayán (Cauca), Colombia.<br />
           Atención remota a nivel nacional y para proyectos en América Latina.
         </p>
         <span class="card-sub">Horario: Lun - Vie 8:00 a 18:00 (COT)</span>
@@ -30,38 +30,35 @@
       <div class="footer-card">
         <h3 class="card-title">CONTACTO DIRECTO</h3>
         <p class="card-text">
-          <strong>Correo:</strong> contacto@mvcsoftware.com.co<br />
-          <strong>WhatsApp:</strong> +57 300 000 0000<br />
+          <strong>Correo:</strong> <a href="mailto:juan.moreno@mvcpopayan.cloud">juan.moreno@mvcpopayan.cloud</a><br />
+          <strong>WhatsApp:</strong> <a href="https://wa.me/573146213391" target="_blank" rel="noopener noreferrer">+57 314 621 3391</a><br />
           <strong>Soporte SLA:</strong> 24/7 para clientes activos
         </p>
       </div>
 
       <div class="footer-card">
-        <h3 class="card-title">CANALES & REDES</h3>
+        <h3 class="card-title">CANALES</h3>
         <ul class="footer-links">
-          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Corporation ↗</a></li>
-          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Open Source ↗</a></li>
-          <li><a href="#contacto">Agenda en Google Meet ↗</a></li>
+          <li><a href="https://wa.me/573146213391" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp ↗</a></li>
+          <li><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Asesor%C3%ADa%20t%C3%A9cnica%20con%20MVC%20Tech%20Popay%C3%A1n&amp;details=Reuni%C3%B3n%20por%20Google%20Meet%20para%20revisar%20mi%20proyecto%20de%20software.&amp;add=mvc.tech.popayan%40gmail.com" target="_blank" rel="noopener noreferrer">Agenda en Google Meet ↗</a></li>
         </ul>
       </div>
 
       <div class="footer-card">
-        <h3 class="card-title">LEGAL Y NAVEGACIÓN</h3>
+        <h3 class="card-title">NAVEGACIÓN</h3>
         <ul class="footer-links">
           <li><a href="#servicios">Servicios de Desarrollo</a></li>
           <li><a href="#metodologia">Metodología Ágil</a></li>
           <li><a href="#faq">Preguntas Frecuentes</a></li>
-          <li><a href="#" class="legal-link">Tratamiento de Datos (Ley 1581)</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p class="copyright">
-        © {new Date().getFullYear()} MVC Software Studio. Todos los derechos reservados. Hecho con Astro para máximo rendimiento y SEO.
+        © {new Date().getFullYear()} MVC Tech Popayán. Todos los derechos reservados. Hecho con Astro para máximo rendimiento y SEO.
       </p>
       <div class="footer-bottom-links">
-        <span>NIT: 900.000.000-1</span>
         <span>Colombia</span>
       </div>
     </div>
@@ -191,9 +188,13 @@
     color: var(--primary);
   }
 
-  .legal-link {
-    color: var(--text-muted) !important;
-    font-size: 0.82rem !important;
+  .card-text a {
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+
+  .card-text a:hover {
+    color: var(--primary);
   }
 
   .footer-bottom {

@@ -7,22 +7,21 @@ interface Props {
 }
 
 const {
-  title = "Desarrollo de Software a la Medida en Colombia | MVC Software Studio",
+  title = "Desarrollo de Software a la Medida en Colombia | MVC Tech Popayán",
   description = "Empresa de desarrollo de software a la medida en Colombia. Especialistas en Java Spring Boot, React, automatización con n8n y Business Intelligence. Solicita tu asesoría.",
-  canonical = "https://mvcsoftware.com.co/",
-  ogImage = "https://mvcsoftware.com.co/og-image.jpg"
+  canonical = "https://mvcpopayan.cloud/",
+  ogImage = "https://mvcpopayan.cloud/logo.png"
 } = Astro.props;
 
 // JSON-LD Schemas for Schema.org
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://mvcsoftware.com.co/#organization",
-  "name": "MVC.Tech",
-  "alternateName": "MVC Tecnología Innovación Soluciones Popayán",
-  "url": "https://mvcsoftware.com.co/",
-  "logo": "https://mvcsoftware.com.co/logo.png",
-  "image": "https://mvcsoftware.com.co/logo.png",
+  "@id": "https://mvcpopayan.cloud/#organization",
+  "name": "MVC Tech Popayán",
+  "url": "https://mvcpopayan.cloud/",
+  "logo": "https://mvcpopayan.cloud/logo.png",
+  "image": "https://mvcpopayan.cloud/logo.png",
   "description": "Estudio de ingeniería y desarrollo de software a la medida en Popayán, Colombia. Soluciones empresariales con Java Spring Boot, React, APIs y automatización n8n.",
   "address": {
     "@type": "PostalAddress",
@@ -68,9 +67,9 @@ const organizationSchema = {
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://mvcsoftware.com.co/#website",
-  "url": "https://mvcsoftware.com.co/",
-  "name": "MVC Software Studio - Desarrollo de Software",
+  "@id": "https://mvcpopayan.cloud/#website",
+  "url": "https://mvcpopayan.cloud/",
+  "name": "MVC Tech Popayán",
   "inLanguage": "es-CO"
 };
 ---
@@ -80,14 +79,14 @@ const webSiteSchema = {
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="keywords" content="desarrollo de software, desarrollo de software a la medida, empresa de desarrollo de software Colombia, desarrollo web Java Spring Boot React, automatizacion n8n, consultoria TI Bogota Medellin" />
-<meta name="author" content="MVC Software Studio" />
+<meta name="keywords" content="desarrollo de software, desarrollo de software a la medida, empresa de desarrollo de software Colombia, desarrollo web Java Spring Boot React, automatizacion n8n, desarrollo de software Popayán, consultoria TI Cauca" />
+<meta name="author" content="MVC Tech Popayán" />
 
 <!-- Geo Local SEO Colombia -->
 <meta name="geo.region" content="CO" />
-<meta name="geo.placename" content="Bogotá, Colombia" />
-<meta name="geo.position" content="4.7110;-74.0721" />
-<meta name="ICBM" content="4.7110, -74.0721" />
+<meta name="geo.placename" content="Popayán, Cauca, Colombia" />
+<meta name="geo.position" content="2.4419;-76.6063" />
+<meta name="ICBM" content="2.4419, -76.6063" />
 
 <!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="website" />
@@ -95,7 +94,7 @@ const webSiteSchema = {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="MVC Software Studio" />
+<meta property="og:site_name" content="MVC Tech Popayán" />
 <meta property="og:locale" content="es_CO" />
 
 <!-- Twitter Card -->

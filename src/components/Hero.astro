@@ -59,36 +59,21 @@
             <span class="dot green"></span>
           </div>
           <span class="terminal-title">mvc-architecture-core.ts</span>
-          <span class="terminal-badge">LIVE PRODUCTION</span>
+          <span class="terminal-badge">SPRING BOOT + REACT</span>
         </div>
         <div class="code-preview">
           <div class="code-line"><span class="c-keyword">import</span> &#123; <span class="c-entity">MicroserviceCluster</span> &#125; <span class="c-keyword">from</span> <span class="c-string">'@mvc/cloud'</span>;</div>
           <div class="code-line"><span class="c-keyword">import</span> &#123; <span class="c-entity">WorkflowOrchestrator</span> &#125; <span class="c-keyword">from</span> <span class="c-string">'@mvc/n8n'</span>;</div>
           <div class="code-line">&nbsp;</div>
-          <div class="code-line"><span class="c-comment">// Despliegue de alto rendimiento sin deuda técnica</span></div>
+          <div class="code-line"><span class="c-comment">// Arquitectura limpia, lista para crecer</span></div>
           <div class="code-line"><span class="c-keyword">export const</span> <span class="c-func">deployEnterpriseSystem</span> = <span class="c-keyword">async</span> () =&gt; &#123;</div>
           <div class="code-line indent"><span class="c-keyword">const</span> backend = <span class="c-keyword">await</span> SpringBoot.<span class="c-func">initCluster</span>(&#123;</div>
           <div class="code-line indent-2">arch: <span class="c-string">'Hexagonal'</span>,</div>
-          <div class="code-line indent-2">latency: <span class="c-string">'&lt; 18ms'</span>,</div>
-          <div class="code-line indent-2">concurrency: <span class="c-number">100_000</span></div>
+          <div class="code-line indent-2">tests: <span class="c-keyword">true</span>,</div>
+          <div class="code-line indent-2">deploy: <span class="c-string">'Docker'</span></div>
           <div class="code-line indent">&#125;);</div>
           <div class="code-line indent"><span class="c-keyword">return</span> backend.<span class="c-func">scale</span>();</div>
           <div class="code-line">&#125;;</div>
-        </div>
-
-        <div class="metrics-grid">
-          <div class="metric-pill">
-            <span class="metric-val">99.98%</span>
-            <span class="metric-label">Uptime Garantizado</span>
-          </div>
-          <div class="metric-pill">
-            <span class="metric-val">0 Deuda</span>
-            <span class="metric-label">Clean Code & QA</span>
-          </div>
-          <div class="metric-pill">
-            <span class="metric-val">100%</span>
-            <span class="metric-label">Propiedad de Código</span>
-          </div>
         </div>
       </div>
     </div>
@@ -287,42 +272,14 @@
   .c-entity { color: #F472B6; }
   .c-string { color: #A7F3D0; }
   .c-func { color: #FCD34D; }
-  .c-number { color: #FBBF24; }
   .c-comment { color: #64748B; font-style: italic; }
 
   .indent { padding-left: 1.25rem; }
   .indent-2 { padding-left: 2.5rem; }
 
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
 
-  .metric-pill {
-    background-color: #0F172A;
-    padding: 14px 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
 
-  .metric-val {
-    font-family: var(--font-mono);
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #38BDF8;
-  }
 
-  .metric-label {
-    font-size: 0.68rem;
-    color: #94A3B8;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
 
   @media (max-width: 992px) {
     .hero-container {

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://mvcsoftware.com.co',
+  site: 'https://mvcpopayan.cloud',
   integrations: [sitemap()],
   image: {
     domains: [],

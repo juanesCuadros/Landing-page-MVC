@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mvcsoftware.com.co/sitemap-index.xml
+Sitemap: https://mvcpopayan.cloud/sitemap-index.xml
